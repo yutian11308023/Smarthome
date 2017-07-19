@@ -1,4 +1,0 @@
-
-hello
-
-Git has a mutable stage called index.
