@@ -49,7 +49,7 @@ while 1==1:
 #读取sqlite数据库data
     cursor = c.execute("SELECT intent, slots from myhome_commands")
     for row in cursor:
-       payload = '{"intent":"%s","slots":"%s","slaveID":3,"control":1,"command_first_byte":1,"command_second_byte":2,"command_third_byte":3,"command_fourth_byte":4}' \
+       payload = '{"intent":"%s","slots":"%s","subordinateID":3,"control":1,"command_first_byte":1,"command_second_byte":2,"command_third_byte":3,"command_fourth_byte":4}' \
        %(row[0], row[1])
 
 #判断读取到的字符串是否有变换（语音控制的输出）
@@ -70,7 +70,7 @@ while 1==1:
          on_mqtt_connect()
          on_publish("0/node/commands/control", payload, 1)
 
-#       payload = '{"intent":"%s","slots":"%s","slaveID":3,"control":1,"command_first_byte":1,"command_second_byte":2,"command_third_byte":3,"command_fourth_byte":4}' \
+#       payload = '{"intent":"%s","slots":"%s","subordinateID":3,"control":1,"command_first_byte":1,"command_second_byte":2,"command_third_byte":3,"command_fourth_byte":4}' \
 #       %(row[0], row[1])
        print (payload)
 

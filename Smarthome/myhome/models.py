@@ -6,7 +6,7 @@ class Nodedata(models.Model):
 	time = models.TextField(max_length = 64)
 	localshortaddr = models.TextField(max_length = 64)
 	gateway_id = models.TextField(max_length = 64)
-	slaveId = models.TextField(max_length = 64)
+	subordinateId = models.TextField(max_length = 64)
 	humidity = models.IntegerField(default = 0)
 	temperature = models.IntegerField(default = 0)
 	light = models.IntegerField(default = 0)
